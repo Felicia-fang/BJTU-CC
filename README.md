@@ -1,7 +1,7 @@
 BJTU抢课脚本
 
 
-[项目地址](https://github.com/aosiweixin/BJTU-CC)
+[项目地址](https://github.com/aosiweixin/BJTU-CC)||[博客地址](http://www.auswitz.top/2021/11/27/BJTU%E9%80%89%E8%AF%BE%E5%86%B2%E5%86%B2%E5%86%B2/)
 
 ## 依赖
 
