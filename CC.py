@@ -7,12 +7,15 @@ from PIL import Image
 import base64
 import json
 import requests
+from configparser import ConfigParser
+
 
 chrome_options = Options()
 chrome_options.add_argument('--headless')
 driver = webdriver.Chrome(chrome_options=chrome_options)
 driver = webdriver.Chrome()
-
+conf = ConfigParser()
+conf.read("init.conf", encoding="utf8")
 # client = pymongo.MongoClient('localhost',27017)
 # mis = client['mis']
 # schedule = mis['schedule']
@@ -21,13 +24,14 @@ wait = WebDriverWait(driver, 10)
 url = 'https://mis.bjtu.edu.cn/home/'
 URL = 'http://jwc.bjtu.edu.cn'
 
-type = 1  # 1为本方案课程 2为其他方案课程
-type2 = 1  # 1为搜索 0为不搜索
-user_id_str = '1928****'  # 学号
-password_str = '********'  # 密码
-xpath_str = ''
-delta = 0.9
-course_number = 'A121006B'
+
+type = conf.getint("token", "type")  # 1为本方案课程 2为其他方案课程
+type2 = conf.getint("token", "type2")  # 1为搜索 0为不搜索
+user_id_str = conf.get("token", "user_id_str")  # 学号
+password_str = conf.get("token", "password_str")  # 密码
+xpath_str = conf.get("token", "xpath_str")
+delta = conf.getfloat("token", "delta")
+course_number = conf.get("token", "course_number")
 # course_number = 'A101020B'
 
 
@@ -291,7 +295,7 @@ def main():
 
     img_path = "full_baidu.png"
     # 用的是图鉴的api去解验证码
-    result = base64_api(uname='Auswitz', pwd='********',
+    result = base64_api(uname=conf.get("ttpicture", "uname"), pwd=conf.get("ttpicture", "pwd"),
                         img=img_path, typeid=16)
     verification_code_submit(result)
 
