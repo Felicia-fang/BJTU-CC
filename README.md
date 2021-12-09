@@ -1,13 +1,24 @@
 BJTU抢课脚本
 
-
-[项目地址](https://github.com/aosiweixin/BJTU-CC)||[博客地址](http://www.auswitz.top/2021/11/27/BJTU%E9%80%89%E8%AF%BE%E5%86%B2%E5%86%B2%E5%86%B2/)
+[项目地址](https://github.com/aosiweixin/BJTU-CC)||[博客地址](http://www.auswitz.top/2021/11/27/BJTU%E9%80%89%E8%AF%BE%E5%86%B2%E5%86%B2%E5%86%B2/)||[col](https://github.com/MrP25)
 
 ## 依赖
 
 主要单独需要下载一个selenium用于模拟浏览器，安装起来稍微有一点麻烦，要注意对应版本，网上搜教程就好啦~~
 
+
+
 chromedriver的[下载地址](https://npm.taobao.org/mirrors/chromedriver/)，下载的版本一定要一一对应~
+
+推荐直接使用[**release1.0**](https://github.com/aosiweixin/BJTU-CC/releases/tag/fin)
+
+推荐直接使用[**release1.0**](https://github.com/aosiweixin/BJTU-CC/releases/tag/fin)
+
+推荐直接使用[**release1.0**](https://github.com/aosiweixin/BJTU-CC/releases/tag/fin)
+
+直接修改init.conf文件和替换对应版本的chromedriver即可~~~
+
+
 
 ```python
 from selenium import webdriver
