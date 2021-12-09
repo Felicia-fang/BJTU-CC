@@ -27,7 +27,7 @@ URL = 'http://jwc.bjtu.edu.cn'
 
 type = conf.getint("token", "type")  # 1为本方案课程 2为其他方案课程
 type2 = conf.getint("token", "type2")  # 1为搜索 0为不搜索
-user_id_str = conf.get("token", "user_id_str")  # 学号
+user_id_str = conf.getint("token", "user_id_str")  # 学号
 password_str = conf.get("token", "password_str")  # 密码
 xpath_str = conf.get("token", "xpath_str")
 delta = conf.getfloat("token", "delta")
