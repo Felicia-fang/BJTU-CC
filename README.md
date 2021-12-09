@@ -7,6 +7,8 @@ BJTU抢课脚本
 
 主要单独需要下载一个selenium用于模拟浏览器，安装起来稍微有一点麻烦，要注意对应版本，网上搜教程就好啦~~
 
+chromedriver的[下载地址](https://npm.taobao.org/mirrors/chromedriver/)，下载的版本一定要一一对应~
+
 ```python
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
